@@ -28,11 +28,11 @@ void loop(void)
   imu::Vector<3> angular_vel = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
 
   Serial.print(" X: ");
-  Serial.print(angural_vel.x(), 4);
+  Serial.print(angular_vel.x(), 4);
   Serial.print(" Y: ");
-  Serial.print(angural_vel.y(), 4);
+  Serial.print(angular_vel.y(), 4);
   Serial.print(" Z: ");
-  Serial.print(angural_vel.z(), 4);
+  Serial.print(angular_vel.z(), 4);
   Serial.println("");
   
   delay(100);
