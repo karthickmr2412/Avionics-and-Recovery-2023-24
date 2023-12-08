@@ -6,7 +6,7 @@ using System.Collections;
 public class SerialPortReader : MonoBehaviour
 {
     // Set the COM port and baud rate according to your setup
-    public string portName = "COM3"; //replace this with the port number
+    public string portName = "COM8"; //replace this with the port number
     public int baudRate = 9600; //replace it with the right baud rate
     public SerialPort serialPort;
 
@@ -65,12 +65,12 @@ public class SerialPortReader : MonoBehaviour
 
     void ProcessParsedData(string[] values)
     {
-        if (values.Length >= 3)
+        if (values.Length >= 14)
         {
 
-            float x = float.Parse(values[0]);
-            float y = float.Parse(values[1]);
-            float z = float.Parse(values[2]);
+            float x = float.Parse(values[1]);
+            float y = float.Parse(values[2]);
+            float z = float.Parse(values[3]);
             Debug.Log("Parsed Data: X=" + x + ", Y=" + y + ", Z=" + z);
         }
     }
